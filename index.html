@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="container">
+        <div class="wrapper clearfix">
+                <button data-target="modal1" class="btn modal-trigger">Rules</button>
+                <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Rules</h4>
+                    <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+                    <ul>
+                        <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+                        <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+                        <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+                    </ul>
+                    <p>The first player to score 100 or more points wins.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>     
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="app.js"></script>
+        <script>
+            $(document).ready(function(){
+             $('.modal').modal();
+            });
+        </script>
+    </body>
+</html>
